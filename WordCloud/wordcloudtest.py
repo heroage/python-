@@ -22,7 +22,7 @@ def replaceString(text, oldStringList, newString):
 
 def getFileContent(filePath):
     content = ''
-    with open(filePath, mode='r') as f:
+    with open(filePath, mode='r', encoding='utf8') as f:
         content = replaceString(f.read(), ['\n\r'], '')
     return content
 
